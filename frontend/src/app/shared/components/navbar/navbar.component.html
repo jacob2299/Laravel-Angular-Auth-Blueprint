@@ -1,0 +1,21 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand">Home</a>
+  <ul class="nav justify-content-end">
+    <li class="dropdown">
+      <div class="btn-group" dropdown>
+        <button id="button" dropdownToggle type="button" class="btn btn-primary dropdown-toggle" aria-controls="dropdown">
+          Test user
+          <span class="caret"></span>
+        </button>
+        <ul id="dropdown" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button">
+          <li role="menuitem">
+            <a href="#" class="dropdown-item" [routerLink]="['/home/google2fa']">2 Factor Authenticatie</a>
+          </li>
+          <li role="menuitem">
+            <a href="#" class="dropdown-item" (click)="logout()">Uitloggen</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>

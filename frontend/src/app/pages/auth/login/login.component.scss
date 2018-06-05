@@ -1,0 +1,27 @@
+.btn-google {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-color: transparent;
+  box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.07);
+  padding: 7px;
+  border-radius: 4px;
+  transition: all 100ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 3px 4px 6px 1px rgba(0,0,0,0.07);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  img {
+    width: 20px;
+    height: auto;
+    margin-right: 7px;
+  }
+}

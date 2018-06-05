@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-sm-8 offset-sm-2">
+      <div class="card align-items-center" *ngIf="google2fa">
+        <div class="card-body">
+          <h5 class="card-title">Google Authenticator</h5>
+        </div>
+        <img class="card-img-bottom" [src]="google2fa.qrImage">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="registerPage container">
+  <div class="row mt-3 mb-3">
+    <div class="col">
+      <h1 class="display-4 text-center">Registreren</h1>
+    </div>
+  </div>
+  <div class="row mt-3 justify-content-center">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <form [formGroup]="registerForm">
+            <div class="form-group">
+              <label for="name">Naam</label>
+              <input type="text" class="form-control" id="name" placeholder="Naam" formControlName="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Email" email formControlName="email">
+            </div>
+            <div class="form-group">
+              <label for="password">Wachtwoord</label>
+              <input type="password" class="form-control" id="password" placeholder="Wachtwoord" formControlName="password">
+            </div>
+            <div class="form-group">
+              <label for="password-confirmation">Wachtwoord bevestigen</label>
+              <input type="password" class="form-control" id="password-confirmation" placeholder="Wachtwoord bevestigen" formControlName="passwordConfirmation">
+            </div>
+            <button type="submit" class="btn btn-primary float-right" [ladda]="isLoading" data-style="zoom-in" [disabled]="!registerForm.valid"
+              (click)="register()">Registreren</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
