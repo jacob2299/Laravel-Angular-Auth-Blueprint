@@ -26,7 +26,11 @@ export class GoogleLoginCallbackComponent implements OnInit {
         return;
       }
 
-      this.router.navigate(['/auth/2fa']);
+      if (res.user.google2faEnabled) {
+        this.router.navigate(['/auth/2fa']);
+      } else {
+        this.router.navigate(['home']);
+      }
     });
   }
 }
